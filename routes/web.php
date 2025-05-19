@@ -17,3 +17,4 @@ Route::get('/overons', function () {
 Route::get('/privacy', function () {
     return view('privacy');
 })->name('privacy');
+
