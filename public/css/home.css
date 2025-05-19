@@ -1,0 +1,76 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header en navigatie */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Secties */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#over-ons {
+    background-color: #e2e2e2;
+}
+
+#diensten {
+    background-color: #f4f4f4;
+}
+
+#contact {
+    background-color: #e2e2e2;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
