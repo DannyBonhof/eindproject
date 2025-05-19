@@ -7,6 +7,9 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header en navigatie */
@@ -42,29 +45,12 @@ section {
     text-align: center;
 }
 
-#home {
-    background-color: #f4f4f4;
-}
-
-#over-ons {
-    background-color: #e2e2e2;
-}
-
-#diensten {
-    background-color: #f4f4f4;
-}
-
-#contact {
-    background-color: #e2e2e2;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
 h1, h2 {
     margin-bottom: 20px;
+}
+
+main {
+    flex: 1;
 }
 
 /* Footer */
@@ -73,4 +59,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: auto;
 }
+
