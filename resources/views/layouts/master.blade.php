@@ -17,7 +17,7 @@
             <div class="dropdown">
         <button class="dropbtn">Menu &#9662;</button>
         <div class="dropdown-content">
-            <a href="#">Sponsors</a>
+            <a href="{{ route('sponsoren') }}">Sponsoren</a>
         </div>
     </div>
         <form class="searchbar" action="#" method="get">
