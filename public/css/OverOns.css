@@ -1,0 +1,58 @@
+#OverOnsContainer
+{
+
+    text-align: center;
+
+}
+#OverOnsBlok1
+{
+
+    margin-top: 50px;
+    border: solid black;
+    border-radius: 10px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-bottom: 10px;
+
+}
+#OverOnsBlok2
+{
+
+    margin-top: 10px;
+    border: solid black;
+    padding-top: 15px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 10px;
+
+}
+
+
+#PrivacyContainer
+{
+
+    text-align: center;
+
+}
+#PrivacyBlok1
+{
+
+    margin-top: 50px;
+    border: solid black;
+    border-radius: 10px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-bottom: 10px;
+
+}
+#PrivacyBlok2
+{
+
+    margin-top: 10px;
+    border: solid black;
+    padding-top: 15px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 10px;
+
+}
