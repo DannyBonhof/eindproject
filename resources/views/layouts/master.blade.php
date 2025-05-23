@@ -14,7 +14,7 @@
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('series') }}">Series</a></li>
                 <li><a href="{{ route('overons') }}">Over ons</a></li>
-                <li><a href="{{ route('privacy') }}">Privacy</a></li>
+                <li><a href="{{ route('login') }}">Login</a></li>
             </ul>
         </nav>
     </header>

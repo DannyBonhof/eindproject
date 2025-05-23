@@ -14,6 +14,6 @@ Route::get('/overons', function () {
     return view('overons');
 })->name('overons');
 
-Route::get('/privacy', function () {
-    return view('privacy');
-})->name('privacy');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
