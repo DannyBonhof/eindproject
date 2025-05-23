@@ -9,6 +9,21 @@
 
 <body>
     <header>
+        <div class="logo">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/logo_eindproject_noBG.png') }}" alt="Logo" style="height:150px; width:150px;">
+            </a>
+        </div>
+            <div class="dropdown">
+        <button class="dropbtn">Menu &#9662;</button>
+        <div class="dropdown-content">
+            <a href="#">Sponsors</a>
+        </div>
+    </div>
+        <form class="searchbar" action="#" method="get">
+            <input type="text" placeholder="Zoeken..." name="q">
+            <button type="submit">Zoek</button>
+        </form>
         <nav>
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
