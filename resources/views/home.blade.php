@@ -4,6 +4,91 @@
 
 @section('content')
 <?php
+function getRandomShow($maxId = 3000) {
+    $tries = 0;
+    do {
+        $id = rand(1, $maxId);
+        $url = "https://api.tvmaze.com/shows/$id";
+        $response = @file_get_contents($url);
+
+        if ($response === FALSE) {
+            // Fout, probeer een andere ID
+            $tries++;
+            continue;
+        }
+
+        $show = json_decode($response, true);
+        if (isset($show['name'])) {
+            return $show;
+        } else {
+            $tries++;
+        }
+    } while ($tries < 10);
+
+    return null; // Na 10 pogingen geen resultaat
+}
+
+$show = getRandomShow();
+?>
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Random TV Show</title>
+    <style>
+    #show {
+        max-width: 600px;
+        min-height: 300px;
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column; /* Zet naast elkaar */
+        align-items: row;
+        gap: 20px; /* Ruimte tussen afbeelding en tekst */
+    }
+    #show img {
+        max-width: 220px;
+        height: 300px;
+        display: block;
+        margin-bottom: 0;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    .show-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="show">
+    <?php if ($show): ?>
+        <!-- <h2><?= htmlspecialchars($show['name']) ?></h2> -->
+        <?php if (isset($show['image']['medium'])): ?>
+            <img src="<?= htmlspecialchars($show['image']['medium']) ?>" alt="<?= htmlspecialchars($show['name']) ?>">
+        <?php endif; ?>
+        <p><strong>Titel:</strong><?= htmlspecialchars($show['name']) ?>
+        <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show['genres'])) ?></p>
+        <p><strong>Rating:</strong> <?= htmlspecialchars($show['rating']['average'] ?? 'N.v.t.') ?></p>
+        <!-- Beschrijving is verwijderd -->
+    <?php else: ?>
+        <p>Kon geen serie laden, probeer het opnieuw.</p>
+    <?php endif; ?>
+</div>
+
+</body>
+</html>
+
+
+<?php
 $url = "https://api.tvmaze.com/shows";
 
 $response = file_get_contents($url);
@@ -35,7 +120,7 @@ $top10 = array_slice($shows, 0, 10);
     position: relative;
     width: 90%; 
     margin: 20px auto;
-    margin-top: 600px;
+    margin-top: 20px;
   }
   .scroll-container {
     display: flex;
@@ -45,6 +130,7 @@ $top10 = array_slice($shows, 0, 10);
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
+    background-color: lightgray;
   }
   .scroll-container::-webkit-scrollbar {
     height: 8px;
@@ -127,5 +213,7 @@ $top10 = array_slice($shows, 0, 10);
     container.scrollBy({ left: distance, behavior: 'smooth' });
   }
 </script>
+
+
 
 @endsection

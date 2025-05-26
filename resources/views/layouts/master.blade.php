@@ -39,7 +39,7 @@
     </main>
 
     <footer>
-        <p>Footer</p>
+        <p>&copy; Biet'n inc</p>
     </footer>
 </body>
 </html>
