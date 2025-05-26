@@ -43,10 +43,6 @@ $show = getRandomShow();
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Random TV Show</title>
-    <style>
-    
-    </style>
 </head>
 <body>
 <div id="show">
@@ -83,7 +79,7 @@ if ($response === FALSE) {
 $shows = json_decode($response, true);
 
 if ($shows === NULL) {
-    die("Kon JSON niet decoderen.");
+    die("Kon JSON niet vinden.");
 }
 
 usort($shows, function($a, $b) {
