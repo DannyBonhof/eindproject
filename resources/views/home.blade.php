@@ -21,7 +21,6 @@ function getRandomShow($maxId = 3000) {
         $response = @file_get_contents($url);
 
         if ($response === FALSE) {
-            // Fout, probeer een andere ID
             $tries++;
             continue;
         }
@@ -34,7 +33,7 @@ function getRandomShow($maxId = 3000) {
         }
     } while ($tries < 10);
 
-    return null; // Na 10 pogingen geen resultaat
+    return null;
 }
 
 $show = getRandomShow();
@@ -52,7 +51,6 @@ $show = getRandomShow();
 <body>
 <div id="show">
     <?php if ($show): ?>
-        <!-- <h2><?= htmlspecialchars($show['name']) ?></h2> -->
         <?php if (isset($show['image']['medium'])): ?>
             <img src="<?= htmlspecialchars($show['image']['medium']) ?>" alt="<?= htmlspecialchars($show['name']) ?>">
         <?php endif; ?>
