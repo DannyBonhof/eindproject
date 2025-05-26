@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 
-</html>
 <?php
 function getRandomShow($maxId = 3000) {
     $tries = 0;
@@ -39,11 +38,6 @@ function getRandomShow($maxId = 3000) {
 $show = getRandomShow();
 ?>
 
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-</head>
 <body>
 <div id="show">
     <?php if ($show): ?>
@@ -56,6 +50,7 @@ $show = getRandomShow();
     <?php else: ?>
         <p>Kon geen serie laden, probeer het opnieuw.</p>
     <?php endif; ?>
+    
 </div>
 </body>
 </html>
