@@ -17,3 +17,7 @@ Route::get('/overons', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/sponsoren', function () {
+    return view('sponsoren');
+})->name('sponsoren');
