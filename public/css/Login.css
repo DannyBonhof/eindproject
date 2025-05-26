@@ -1,0 +1,24 @@
+#loginForm
+{
+
+    text-align: center;
+    border: solid rgb(245, 197, 24);
+    margin-top: 90px;
+    margin-left: 620px;
+    margin-right: 620px;
+    box-shadow: 0 2px 15px rgb(245, 197, 24);
+
+
+}
+
+#AdContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px; /* optioneel: afstand van de rand */
+}
+
+#AdPilsL, #AdPilsR {
+    height: 420px;
+    width: 227px;
+}
