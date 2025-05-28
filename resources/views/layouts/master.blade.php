@@ -30,7 +30,7 @@
                 <li><a href="{{ url('home') }}">Home</a></li>
                 <li><a href="{{ url('about') }}">Over ons</a></li>
                 <li><a href="{{ url('/login') }}">Login</a></li>
-                <li><a href="{{ url('/Series') }}">Series</a></li>
+                <li><a href="{{ url('/series') }}">Series</a></li>
 
             </ul>
         </nav>
