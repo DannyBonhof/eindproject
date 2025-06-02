@@ -11,19 +11,23 @@
             <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
 
     <title>Login Pagina</title>
-    <div id="AdContainer">
-        <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertensie">
-        <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertensie">
-    </div>
+<div id="AdWrapper">
+    <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+    
     <div id="loginForm">
         <h1>Login</h1>
-
         <input type="text" id="username" placeholder="naam">
-            <br><br>
+        <br><br>
         <input type="password" id="password" placeholder="Wachtwoord" onkeyup="passwordCheck()">
-            <br><br>
-        <button onclick="login()">Login</button>
-        <button onclick="Registeer()">Registeer</button>
+        <br><br>
+        <button onclick="login()" id="LoginButton">Login</button>
+        <br>
+        <p>Heeft u nog geen account klik hier onder</p>
+    	&rarr; <button onclick="Registeer()" id="RegisterButton">Registeer</button> &larr;
+    </div>
+    
+    <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+</div>
         
     </div>
 

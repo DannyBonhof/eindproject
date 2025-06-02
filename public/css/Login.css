@@ -1,24 +1,52 @@
-#loginForm
-{
+#AdWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 90px;
+}
 
+#AdPilsL {
+    height: 400px;
+    width: 227px;
+    box-shadow: 0 2px 15px  rgb(113, 8, 8);
+}
+
+#AdPilsR {
+    height: 400px;
+    width: 227px;
+    box-shadow: 0 2px 15px rgb(113, 8, 8);
+}
+
+
+#loginForm {
     text-align: center;
     border: solid rgb(245, 197, 24);
-    margin-top: 90px;
-    margin-left: 620px;
-    margin-right: 620px;
     box-shadow: 0 2px 15px rgb(245, 197, 24);
-
-
+    padding: 30px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    min-width: 300px;
+    margin-left: 300px;  /* doet de linker meer links */
+    margin-right: 300px; /* doet de rechter meer rechts */
+}
+#LoginButton, #RegisterButton {
+    padding: 6px 14px;
+    border: none;
+    background: rgb(245, 197, 24);
+    color: black;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 15px rgb(245, 197, 24);
 }
 
-#AdContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 100px; /* optioneel: afstand van de rand */
-}
-
-#AdPilsL, #AdPilsR {
-    height: 420px;
-    width: 227px;
+#username, #password
+{
+    padding: 6px 10px;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0 2px 15px rgb(155, 155, 155);
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
 }
