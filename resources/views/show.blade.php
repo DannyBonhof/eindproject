@@ -3,7 +3,7 @@
 @section('title', 'Zoekresultaat')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
 @endsection
 
 @section('content')
@@ -32,4 +32,10 @@ if (isset($_GET['q']) && !empty(trim($_GET['q']))) {
         <p>Geen resultaten gevonden voor deze titel.</p>
     <?php endif; ?>
 </div>
+
+<?php if ($show && !empty($show['summary'])): ?>
+    <div class="show-description">
+        <p><strong>Beschrijving:</strong> <?= strip_tags($show['summary']) ?></p>
+    </div>
+<?php endif; ?>
 @endsection
