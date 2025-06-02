@@ -26,6 +26,11 @@ Route::get('/series', function () {
 Route::get('/sponsoren', function () {
     return view('sponsoren');
 })->name('sponsoren');
+
+
+Route::get('/show', function () {
+    return view('show');
+})->name('show');
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
