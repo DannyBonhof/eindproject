@@ -21,8 +21,8 @@
                     <a href="{{ url('sponsoren') }}">Sponsoren</a>
                 </div>
             </div>
-                <form class="searchbar" action="#" method="get">
-                    <input type="text" placeholder="Zoeken..." name="q">
+                <form class="searchbar" action="{{ route('show') }}" method="get">
+                    <input type="text" placeholder="Zoeken..." name="q" value="{{ request('q') }}">
                     <button type="submit">Zoek</button>
                 </form>
         <nav>
