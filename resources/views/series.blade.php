@@ -69,7 +69,9 @@ function sortShowsByName(&$shows) {
             $image = $show['image']['medium'] ?? 'https://via.placeholder.com/180x250?text=Geen+afbeelding';
             $genres = !empty($show['genres']) ? implode(', ', $show['genres']) : 'N.v.t.';
             echo '<div class="show">';
+            echo '<a href="/show?id=' . $show['id'] . '">';
             echo '<img src="' . htmlspecialchars($image) . '" alt="' . htmlspecialchars($show['name']) . '">';
+            echo '</a>';
             echo '<div class="rating">Genre: ' . htmlspecialchars($genres) . '</div>';
             echo '</div>';
         }
