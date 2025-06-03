@@ -1,11 +1,10 @@
-#OverOnsContainer
-{
+#OverOnsContainer {
 
     text-align: center;
 
 }
-#OverOnsBlok1
-{
+
+#OverOnsBlok1 {
 
     margin-top: 50px;
     border: solid black;
@@ -15,8 +14,8 @@
     margin-bottom: 10px;
 
 }
-#OverOnsBlok2
-{
+
+#OverOnsBlok2 {
 
     margin-top: 10px;
     border: solid black;
@@ -28,14 +27,13 @@
 }
 
 
-#PrivacyContainer
-{
+#PrivacyContainer {
 
     text-align: center;
 
 }
-#PrivacyBlok1
-{
+
+#PrivacyBlok1 {
 
     margin-top: 50px;
     border: solid black;
@@ -45,8 +43,8 @@
     margin-bottom: 10px;
 
 }
-#PrivacyBlok2
-{
+
+#PrivacyBlok2 {
 
     margin-top: 10px;
     border: solid black;

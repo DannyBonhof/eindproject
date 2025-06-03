@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,23 @@
 </head>
 
 <body>
-    <header>    
-         <div class="logo">
+    <header>
+        <div class="logo">
             <a href="{{ url('/') }}">
-                <img src="{{ asset('images/logo_eindproject_noBG.png') }}" alt="Logo" style="height:150px; width:150px;">
+                <img src="{{ asset('images/logo_eindproject_noBG.png') }}" alt="Logo"
+                    style="height:150px; width:150px;">
             </a>
         </div>
-            <div class="dropdown">
+        <div class="dropdown">
             <button class="dropbtn">Menu &#9662;</button>
-                <div class="dropdown-content">
-                    <a href="{{ url('sponsoren') }}">Sponsoren</a>
-                </div>
+            <div class="dropdown-content">
+                <a href="{{ url('sponsoren') }}">Sponsoren</a>
             </div>
-                <form class="searchbar" action="{{ route('show') }}" method="get">
-                    <input type="text" placeholder="Zoeken..." name="q" value="{{ request('q') }}">
-                    <button type="submit">Zoek</button>
-                </form>
+        </div>
+        <form class="searchbar" action="{{ route('show') }}" method="get">
+            <input type="text" placeholder="Zoeken..." name="q" value="{{ request('q') }}">
+            <button type="submit">Zoek</button>
+        </form>
         <nav>
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
@@ -34,7 +36,7 @@
 
             </ul>
         </nav>
-   
+
     </header>
 
     <main>
@@ -45,4 +47,5 @@
         <p>&copy; Biet'n inc</p>
     </footer>
 </body>
+
 </html>
