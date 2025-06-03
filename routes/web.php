@@ -32,7 +32,9 @@ Route::get('/show', function () {
     return view('show');
 })->name('show');
 
-
+Route::get('/shows/{id}', function ($id) {
+    return view('shows', ['id' => $id]);
+})->name('shows');
 
 
 // Route::get('/dashboard', function () {

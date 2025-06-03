@@ -92,10 +92,13 @@ $top10 = array_slice($shows, 0, 10);
         $image = $show['image']['medium'] ?? 'https://via.placeholder.com/180x250?text=Geen+afbeelding';
         $rating = $show['rating']['average'] ?? 'N.v.t.';
         echo '<div class="show">';
+        $name = urlencode($show['name']);
+        echo '<a href="/show?id=' . $show['id'] . '">';
         echo '<img src="' . htmlspecialchars($image) . '" alt="' . htmlspecialchars($show['name']) . '">';
+        echo '</a>';
         echo '<div class="rating">Rating: ' . htmlspecialchars($rating) . '</div>';
         echo '</div>';
-    }
+        }
     ?>
   </div>
   <button class="scroll-btn scroll-right" onclick="scrollShows(200)" aria-label="Scroll naar rechts">&#8594;</button>

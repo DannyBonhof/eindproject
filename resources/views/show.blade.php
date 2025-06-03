@@ -9,7 +9,14 @@
 @section('content')
 <?php
 $show = null;
-if (isset($_GET['q']) && !empty(trim($_GET['q']))) {
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $url = "https://api.tvmaze.com/shows/$id";
+    $response = @file_get_contents($url);
+    if ($response !== FALSE) {
+        $show = json_decode($response, true);
+    }
+} elseif (isset($_GET['q']) && !empty(trim($_GET['q']))) {
     $query = urlencode($_GET['q']);
     $url = "https://api.tvmaze.com/singlesearch/shows?q=$query";
     $response = @file_get_contents($url);
