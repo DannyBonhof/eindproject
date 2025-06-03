@@ -19,7 +19,6 @@ if ($shows === NULL) {
     die("Kon JSON niet vinden.");
 }
 
-// Define the genres you want to display
 $genresToShow = [
     'Comedy' => 'Comedy',
     'Horror/Thriller' => ['Horror', 'Thriller'],
@@ -31,7 +30,6 @@ $genresToShow = [
     'Crime' => 'Crime',
 ];
 
-// Helper to filter shows by genre(s)
 function filterShowsByGenre($shows, $genre) {
     if (is_array($genre)) {
         return array_filter($shows, function($show) use ($genre) {
@@ -44,7 +42,6 @@ function filterShowsByGenre($shows, $genre) {
     }
 }
 
-// Helper to sort shows alphabetically by name
 function sortShowsByName(&$shows) {
     usort($shows, function($a, $b) {
         return strcmp($a['name'], $b['name']);
@@ -56,7 +53,7 @@ function sortShowsByName(&$shows) {
 @foreach ($genresToShow as $label => $genre)
     <?php
         $filtered = filterShowsByGenre($shows, $genre);
-        $filtered = array_values($filtered); // reindex
+        $filtered = array_values($filtered);
         sortShowsByName($filtered);
         $top100 = array_slice($filtered, 0, 100);
     ?>
