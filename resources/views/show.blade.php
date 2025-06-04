@@ -11,7 +11,7 @@
     $show = null;
     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $id = intval($_GET['id']);
-        $url = "https://api.tvmaze.com/shows/$id";
+        $url = "https://api.tvmaze.com/shows/$id?embed[]=seasons&embed[]=episodes";
         $response = @file_get_contents($url);
         if ($response !== FALSE) {
             $show = json_decode($response, true);
@@ -24,9 +24,13 @@
             $show = json_decode($response, true);
         }
     }
-            ?>
+                ?>
     <div id="show">
         <?php if ($show): ?>
+        <?php
+        $seasons = isset($show['_embedded']['seasons']) ? count($show['_embedded']['seasons']) : 'N.v.t.';
+        $episodes = isset($show['_embedded']['episodes']) ? count($show['_embedded']['episodes']) : 'N.v.t.';
+            ?>
         <?php    if (isset($show['image']['medium'])): ?>
         <img src="<?= htmlspecialchars($show['image']['medium']) ?>" alt="<?= htmlspecialchars($show['name']) ?>">
         <?php    endif; ?>
@@ -34,10 +38,12 @@
             <p><strong>Titel:</strong> <?= htmlspecialchars($show['name']) ?></p>
             <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show['genres'])) ?></p>
             <p><strong>Rating:</strong> <?= htmlspecialchars($show['rating']['average'] ?? 'N.v.t.') ?></p>
+            <p><strong>Seizoenen:</strong> <?= $seasons ?></p>
+            <p><strong>Afleveringen:</strong> <?= $episodes ?></p>
         </div>
         <?php
         $youtubeSearch = 'https://www.youtube.com/results?search_query=' . urlencode($show['name'] . ' trailer');
-                    ?>
+                        ?>
         <div class="trailer-link" style="margin-top:18px;">
             <a href="<?= $youtubeSearch ?>" target="_blank" rel="noopener">
                 Bekijk trailer op YouTube

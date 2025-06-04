@@ -35,7 +35,7 @@
     }
 
     $show = getRandomShow();
-    ?>
+        ?>
 
     <body>
         <div id="show">
@@ -78,7 +78,7 @@
     });
 
     $top10 = array_slice($shows, 0, 10);
-    ?>
+        ?>
 
     <div class="scroll-wrapper">
         <button class="scroll-btn scroll-left" onclick="scrollShows(-200)" aria-label="Scroll naar links">&#8592;</button>
@@ -95,7 +95,7 @@
         echo '<div class="rating">Rating: ' . htmlspecialchars($rating) . '</div>';
         echo '</div>';
     }
-        ?>
+            ?>
         </div>
         <button class="scroll-btn scroll-right" onclick="scrollShows(200)" aria-label="Scroll naar rechts">&#8594;</button>
     </div>
