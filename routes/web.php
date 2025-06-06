@@ -37,6 +37,9 @@ Route::get('/shows/{id}', function ($id) {
 })->name('shows');
 
 
+Route::get('/registreer', function () {
+    return view('registreer');
+})->name('registreer');
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
