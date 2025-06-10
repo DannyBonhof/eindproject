@@ -24,7 +24,7 @@
                 <button onclick="login()" id="LoginButton">Login</button>
                 <br>
                 <p>Heeft u nog geen account klik hier onder</p>
-                &rarr; <button onclick="Registeer()" id="RegisterButton">Registeer</button> &larr;
+                &rarr; <a href="{{ route('registreer') }}" id="RegisterButton" class="register-link">Registeer</a> &larr;
             </div>
 
             <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
