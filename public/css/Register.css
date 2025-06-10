@@ -56,3 +56,10 @@
     font-size: 20px;
     outline: none;
 }
+
+.login-link {
+    text-decoration: none;
+}
+.login-link:hover {
+    background: #e6b800;
+}
