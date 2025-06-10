@@ -16,10 +16,10 @@
             <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
 
             <div id="loginForm">
-                <h1>Login</h1>
-                <input type="text" id="email" placeholder="Email">
-                <br><br>
+                <h1>Registreer</h1>
                 <input type="text" id="username" placeholder="naam">
+                <br><br>
+                <input type="text" id="email" placeholder="Email">
                 <br><br>
                 <input type="password" id="password" placeholder="Wachtwoord" onkeyup="passwordCheck()">
                 <br><br>
