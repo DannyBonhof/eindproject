@@ -22,7 +22,7 @@
         </form>
         <br>
         <p>Heeft u nog geen account? klik hier onder</p>
-        &rarr; <a href="{{ route('register') }}" id="RegisterButton" class="register-link">Register</a> &larr;
+        &rarr; <a href="{{ route('register') }}" id="RegisterButton" class="register-link">Registreer</a> &larr;
     </div>
 
     <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
