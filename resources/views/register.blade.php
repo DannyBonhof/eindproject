@@ -4,7 +4,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/Register.css') }}">
-@endsection
+
 
 @section('content')
 <div id="AdWrapper">

@@ -1,7 +1,13 @@
+
 <?php
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+// Uitlog pagina (beveiligd, alleen voor ingelogde gebruikers)
+Route::middleware('auth')->get('/logout-page', function () {
+    return view('logout');
+})->name('logout.page');
 
 Route::get('/', function () {
     return view('home');
@@ -13,9 +19,9 @@ Route::get('/about', function () {
 })->name('about');
 
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('login');
+// })->name('login');
 
 
 Route::get('/series', function () {
@@ -37,18 +43,4 @@ Route::get('/shows/{id}', function ($id) {
 })->name('shows');
 
 
-Route::get('/registreer', function () {
-    return view('registreer');
-})->name('registreer');
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::get('/profile', [ProfileController::class, 'edit']);
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';
