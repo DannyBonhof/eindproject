@@ -1,0 +1,56 @@
+#AdPils {
+    height: 400px;
+    width: 227px;
+    box-shadow: 0 2px 15px rgb(113, 8, 8);
+    margin-left: 200px;
+}
+#AdPilsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* verticaal centreren */
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.adpils-text {
+    margin-left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(207, 15, 15);
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 330px;
+    box-shadow: 0 2px 15px rgb(113, 8, 8);
+
+}
+
+#AdCiga {
+    height: 359px;
+    width: 869px;
+    box-shadow: 0 2px 15px rgb(144, 83, 4);
+    margin-left: 10px;
+}
+#AdCigaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* verticaal centreren */
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.adCiga-text {
+    margin-left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-left: 340px;
+    margin-right: 330px;
+    box-shadow: 0 2px 15px rgb(0, 0, 0);
+    text-align: center;
+}
