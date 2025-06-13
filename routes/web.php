@@ -1,7 +1,13 @@
+
 <?php
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+// Uitlog pagina (beveiligd, alleen voor ingelogde gebruikers)
+Route::middleware('auth')->get('/logout-page', function () {
+    return view('logout');
+})->name('logout.page');
 
 Route::get('/', function () {
     return view('home');

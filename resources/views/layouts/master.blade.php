@@ -31,9 +31,12 @@
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="{{ url('about') }}">Over ons</a></li>
-                <li><a href="{{ url('/login') }}">Login</a></li>
                 <li><a href="{{ url('/series') }}">Series</a></li>
-
+                @auth
+                    <li><a href="{{ route('logout.page') }}">Uitloggen</a></li>
+                @else
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                @endauth
             </ul>
         </nav>
 
