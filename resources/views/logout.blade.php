@@ -3,7 +3,7 @@
 @section('title', 'Uitloggen')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/uitlog.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/logout.css') }}">
 @endsection
 
 @section('content')
