@@ -49,6 +49,17 @@
                 Bekijk trailer op YouTube
             </a>
         </div>
+            
+        <!-- Put the favourites button here -->
+        @auth   
+        <form method="POST" action="{{ url('favorites.add/' . $show['id']) }}" style="margin-top: 18px;">
+            @csrf
+            <input type="hidden" name="serie_id" value="<?= htmlspecialchars($show['id']) ?>">
+            <button type="submit" class="favorite-btn">Voeg toe aan favorieten</button>
+        </form>
+        @else
+        <p style="margin-top: 18px;">Log in om deze serie aan je favorieten toe te voegen.</p>
+        @endauth    
         <?php else: ?>
         <p>Geen resultaten gevonden voor deze titel.</p>
         <?php endif; ?>

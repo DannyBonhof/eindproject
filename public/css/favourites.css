@@ -1,0 +1,81 @@
+.scroll-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  margin-top: 20px;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: lightgray;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+.show {
+  flex: 0 0 auto;
+  width: 180px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 6px #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.show img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.rating {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 10px;
+  height: 300px;
+  width: 40px;
+  background: rgb(245, 197, 24);
+  box-shadow: 0 0px 25px rgb(245, 197, 24);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-left {
+  left: -50px;
+}
+
+.scroll-right {
+  right: -50px;
+}

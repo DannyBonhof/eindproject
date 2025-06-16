@@ -3,6 +3,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SerieController;
+
 
 // Uitlog pagina (beveiligd, alleen voor ingelogde gebruikers)
 Route::middleware('auth')->get('/logout-page', function () {
@@ -48,6 +50,9 @@ Route::get('/shows/{id}', function ($id) {
 Route::get('/favourites', function () {
     return view('favourites');
 })->middleware('auth');
+
+
+Route::post('/series/{id}/favorite', [SerieController::class, 'favorite'])->name('series.favorite')->middleware('auth');
 
 
 require __DIR__.'/auth.php';
