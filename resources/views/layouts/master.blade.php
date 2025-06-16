@@ -21,6 +21,7 @@
             <button class="dropbtn">Menu &#9662;</button>
             <div class="dropdown-content">
                 <a href="{{ url('sponsoren') }}">Sponsoren</a>
+                <a href="{{ url('favourites') }}">Mijn Lijst</a>
             </div>
         </div>
         <form class="searchbar" action="{{ route('show') }}" method="get">

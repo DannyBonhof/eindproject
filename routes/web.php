@@ -24,6 +24,8 @@ Route::get('/about', function () {
 // })->name('login');
 
 
+
+
 Route::get('/series', function () {
     return view('series');
 })->name('series');
@@ -43,4 +45,11 @@ Route::get('/shows/{id}', function ($id) {
 })->name('shows');
 
 
+Route::get('/favourites', function () {
+    return view('favourites');
+})->middleware('auth');
+
+
 require __DIR__.'/auth.php';
+
+
