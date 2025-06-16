@@ -1,3 +1,5 @@
+
+
 #OverOnsContainer {
 
     text-align: center;
@@ -6,7 +8,7 @@
 
 #OverOnsBlok1 {
 
-    margin-top: 50px;
+    margin-top: 30px;
     border: solid black;
     border-radius: 10px;
     margin-left: 600px;
@@ -35,22 +37,40 @@
 
 #PrivacyBlok1 {
 
-    margin-top: 50px;
+    margin-top: 30px;
     border: solid black;
     border-radius: 10px;
     margin-left: 600px;
     margin-right: 600px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
 }
 
 #PrivacyBlok2 {
 
-    margin-top: 10px;
+    margin-top: 5px;
     border: solid black;
     padding-top: 15px;
     margin-left: 400px;
     margin-right: 400px;
     border-radius: 10px;
 
+}
+
+#AdCiga {
+    height: 248px;
+    width: 600px;
+    box-shadow: 0 2px 15px rgb(144, 83, 4);
+    text-align: center;
+    margin-left: 460px;
+    margin-top: 10px;
+}
+
+
+#AdPilsL, #AdPilsR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 227px;
 }

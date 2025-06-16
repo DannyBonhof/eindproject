@@ -15,6 +15,11 @@
 
     <body>
 
+    <div id="AdWrapper">
+            <a href="{{ url('/sponsoren') }}">
+        <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+            </a>
+
         <div id="OverOnsContainer">
             <div id="OverOnsBlok1">
                 <h1>Over Ons</h1>
@@ -39,8 +44,16 @@
             </div>
         </div>
 
+        <div id="AdCigaContainer">
+            <a href="{{ url('/sponsoren') }}">
+            <img id="AdCiga" src="{{ asset('images/CigarootsAd.png') }}" alt="Advertentie">
+        </div>
 
-
+            <a href="{{ url('/sponsoren') }}">
+            <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+            </a>
+        </div>
+    </div>
     </body>
 
     </html>

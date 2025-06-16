@@ -7,12 +7,12 @@
 
 <div id="AdCigaContainer">
     <img id="AdCiga" src="{{ asset('images/CigarootsAd.png') }}" alt="Advertentie">
-    <div class="adCiga-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia unde blanditiis nobis ratione maxime non laborum aliquid nostrum animi cupiditate saepe optio aperiam expedita excepturi, quas officiis vel pariatur iste.</div>
+    <div class="adCiga-text">Poahhh donders lekker dit, dit moet u niet vergeten dit kan veelste gevoarlijk rook met mate of het gevaorlijk. Maor dit is wel de beste peuk die je kan halen.</div>
 </div>
 
 <div id="AdPilsContainer">
-    <img id="AdPils" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
-    <div class="adpils-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia unde blanditiis nobis ratione maxime non laborum aliquid nostrum animi cupiditate saepe optio aperiam expedita excepturi, quas officiis vel pariatur iste.</div>
+    <img id="AdPils" src="{{ asset(path: 'images/Bietn_Pils.png') }}" alt="Advertentie">
+    <div class="adpils-text">Poahhh donders lekker dit, dit kan wel eens de beste pils zien de je kan halen gemaokt van machtige Bietn maokt dit de beste pilsener.</div>
 </div>
 
 

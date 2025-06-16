@@ -1,31 +1,42 @@
 @extends('layouts.master')
 
-@section('title', 'Login')
-
-@section('styles')
-    <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
-@endsection
+@section('title', 'Privacy')
 
 @section('content')
-<div id="AdWrapper">
-    <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <div id="loginForm">
-        <h1>Login</h1>
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-            <input type="email" name="email" placeholder="Email" required>
-            <br><br>
-            <input type="password" name="password" placeholder="Wachtwoord" required>
-            <br><br>
-            <button type="submit" id="LoginButton">Login</button>
-        </form>
-        <br>
-        <p>Heeft u nog geen account? klik hier onder</p>
-        &rarr; <a href="{{ route('register') }}" id="RegisterButton" class="register-link">Registreer</a> &larr;
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
 
-    <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
-</div>
-@endsection
+        <title>Login Pagina</title>
+        <div id="AdWrapper">
+            <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+
+            <div id="loginForm">
+                <h1>Login</h1>
+                <input type="text" id="username" placeholder="naam">
+                <br><br>
+                <input type="password" id="password" placeholder="Wachtwoord" onkeyup="passwordCheck()">
+                <br><br>
+                <button onclick="login()" id="LoginButton">Login</button>
+                <br>
+                <p>Heeft u nog geen account klik hier onder</p>
+                &rarr; <button onclick="Registeer()" id="RegisterButton">Registeer</button> &larr;
+            </div>
+
+            <img id="AdPilsR" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
+        </div>
+
+        </div>
+
+    </head>
+
+    <body>
+
+    </body>
+
+    </html>
 @endsection
