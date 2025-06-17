@@ -44,14 +44,29 @@
         <?php
         $youtubeSearch = 'https://www.youtube.com/results?search_query=' . urlencode($show['name'] . ' trailer');
                         ?>
+                        <div>
         <div class="trailer-link" style="margin-top:18px;">
             <a href="<?= $youtubeSearch ?>" target="_blank" rel="noopener">
                 Bekijk trailer op YouTube
             </a>
         </div>
+
+
+        <!-- Dingen voor de favoButton -->
+        @auth   
+        <form method="POST" action="{{ url('favoritesadd/' . $show['id']) }}" style="margin-top: 18px;">
+            @csrf
+            <input type="hidden" name="serie_id" value="<?= htmlspecialchars($show['id']) ?>">
+            <button type="submit" class="favoButton">Voeg toe aan mijn lijst</button>
+        </form>
+        
+        @else
+        <p style="margin-top: 18px;">Log in om deze serie aan je favorieten toe te voegen.</p>
+        @endauth    
         <?php else: ?>
         <p>Geen resultaten gevonden voor deze titel.</p>
         <?php endif; ?>
+        </div>
     </div>
 
     <?php if ($show && !empty($show['summary'])): ?>
