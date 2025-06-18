@@ -35,9 +35,13 @@
     }
 
     $show = getRandomShow();
+    $show1 = getRandomShow();
+    $show2 = getRandomShow();
+    $show3 = getRandomShow();
         ?>
 
     <body>
+    <div class="ShowButton">
         <div id="show">
             <?php if ($show): ?>
             <?php    if (isset($show['image']['medium'])): ?>
@@ -52,6 +56,49 @@
             <p>Kon geen serie laden, probeer het opnieuw.</p>
             <?php endif; ?>
         </div>
+        <div id="show">
+            <?php if ($show1): ?>
+            <?php    if (isset($show1['image']['medium'])): ?>
+            <a href="/show?id=<?= $show1['id'] ?>">
+                <img src="<?= htmlspecialchars($show1['image']['medium']) ?>" alt="<?= htmlspecialchars($show1['name']) ?>">
+            </a>
+            <?php    endif; ?>
+            <p><strong>Titel:</strong> <?= htmlspecialchars($show1['name']) ?></p>
+            <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show1['genres'])) ?></p>
+            <p><strong>Rating:</strong> <?= htmlspecialchars($show1['rating']['average'] ?? 'N.v.t.') ?></p>
+            <?php else: ?>
+            <p>Kon geen serie laden, probeer het opnieuw.</p>
+            <?php endif; ?>
+        </div>
+        <div id="show">
+            <?php if ($show2): ?>
+            <?php    if (isset($show2['image']['medium'])): ?>
+            <a href="/show?id=<?= $show2['id'] ?>">
+                <img src="<?= htmlspecialchars($show2['image']['medium']) ?>" alt="<?= htmlspecialchars($show2['name']) ?>">
+            </a>
+            <?php    endif; ?>
+            <p><strong>Titel:</strong> <?= htmlspecialchars($show2['name']) ?></p>
+            <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show2['genres'])) ?></p>
+            <p><strong>Rating:</strong> <?= htmlspecialchars($show2['rating']['average'] ?? 'N.v.t.') ?></p>
+            <?php else: ?>
+            <p>Kon geen serie laden, probeer het opnieuw.</p>
+            <?php endif; ?>
+        </div>
+        <div id="show">
+            <?php if ($show3): ?>
+            <?php    if (isset($show3['image']['medium'])): ?>
+            <a href="/show?id=<?= $show3['id'] ?>">
+                <img src="<?= htmlspecialchars($show3['image']['medium']) ?>" alt="<?= htmlspecialchars($show3['name']) ?>">
+            </a>
+            <?php    endif; ?>
+            <p><strong>Titel:</strong> <?= htmlspecialchars($show3['name']) ?></p>
+            <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show3['genres'])) ?></p>
+            <p><strong>Rating:</strong> <?= htmlspecialchars($show3['rating']['average'] ?? 'N.v.t.') ?></p>
+            <?php else: ?>
+            <p>Kon geen serie laden, probeer het opnieuw.</p>
+            <?php endif; ?>
+        </div>
+    </div>
     </body>
 
     </html>

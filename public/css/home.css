@@ -1,7 +1,10 @@
+.ShowButton{
+  display: flex;
+}
 #show {
-  max-width: 600px;
+  width: 260px;
   min-height: 300px;
-  margin: 20px;
+  margin: 15px;
   font-family: Arial, sans-serif;
   border: 1px solid #ddd;
   padding: 20px;
@@ -9,8 +12,7 @@
   background-color: lightgray;
   display: flex;
   flex-direction: column;
-  /* Zet naast elkaar */
-  align-items: row;
+  align-items: flex-start;
   gap: 20px;
   /* Ruimte tussen afbeelding en tekst */
 }
