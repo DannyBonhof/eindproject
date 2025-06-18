@@ -74,3 +74,35 @@
     height: 400px;
     width: 227px;
 }
+
+    #BietnPilsL, #BietnPilsR {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 260px; /* Make bigger as requested */
+        z-index: 10;
+        display: block;
+    }
+
+    #BietnPilsL {
+        left: 30px;
+    }
+
+    #BietnPilsR {
+        right: 30px;
+    }
+
+    #BietnPilsL img, #BietnPilsR img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 15px rgb(113, 8, 8);
+        background-color: rgb(113, 8, 8);
+        border-radius: 8px;
+        display: block;
+    }
+
+    @media (max-width: 900px) {
+        #BietnPilsL, #BietnPilsR {
+            display: none;
+        }
+    }

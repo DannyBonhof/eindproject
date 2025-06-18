@@ -4,6 +4,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SerieController;
+use App\Http\Controllers\FavoriteController;
 
 
 // Uitlog pagina (beveiligd, alleen voor ingelogde gebruikers)
@@ -54,6 +55,8 @@ Route::get('/favourites', function () {
 
 Route::post('/series/{id}/favorite', [SerieController::class, 'favorite'])->name('series.favorite')->middleware('auth');
 
+Route::get('/favouritesadd/{id}', [FavoriteController::class, 'add'])->name('favourites.add')->middleware('auth');
+ 
 
 require __DIR__.'/auth.php';
 

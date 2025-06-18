@@ -1,0 +1,88 @@
+#AddedText 
+{
+
+    text-align: center;
+    border: solid black;
+    margin-top: 60px;
+    border-radius: 20px;
+    margin-left: 600px;
+    margin-right: 600px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.641);
+    display: flex;
+    flex-direction: column;
+
+}
+
+#BackToListButton
+{
+
+    display: flex;
+    flex-direction: column;
+    padding: 6px 14px;
+    border: none;
+    background: rgb(245, 197, 24);
+    color: black;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 15px rgb(245, 197, 24);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#pageContainer 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* space between buttons */
+}
+
+#CigarootsAd
+{
+
+    margin-top: 30px;
+    margin-bottom: 1px;
+    width: 700px; 
+    height: auto; 
+    display: block;
+    box-shadow: 0 2px 15px rgb(144, 83, 4);
+
+}
+
+.ad-side 
+{
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 270px;   /* Increased from 220px to 270px */
+    height: auto;
+    z-index: 10;;
+
+}
+#BietnPilsL
+{
+
+    left: 30px;
+    box-shadow: 0 0px 13px rgb(113, 8, 8);
+    background-color: rgb(113, 8, 8);
+
+}
+#BietnPilsR
+{
+
+    right: 30px;
+    box-shadow: 0 2px 15px rgb(113, 8, 8);
+    background-color: rgb(113, 8, 8);
+
+}
+@media (max-width: 900px) 
+{
+
+    .ad-side {
+        display: none;
+    }
+    
+}
