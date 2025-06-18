@@ -54,7 +54,7 @@
 
         <!-- Dingen voor de favoButton -->
         @auth   
-        <a href="{{ url('favouritesadd/' . $show['id']) }}" class="favoButton" >bla </a>
+        <a href="{{ url('favouritesadd/' . $show['id']) }}" class="favoButton" >Toevoegen aan Lijst </a>
 
         <!-- <form method="POST" action="{{ url('favouritesadd/' . $show['id']) }}" style="margin-top: 18px;">
             @csrf

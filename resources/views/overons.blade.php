@@ -5,7 +5,6 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/OverOns.css') }}">
 
-<!-- Place these OUTSIDE of #AdWrapper and any other container -->
 <a href="{{ url('/sponsoren') }}" id="BietnPilsL">
     <img src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
 </a>
