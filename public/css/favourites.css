@@ -1,3 +1,24 @@
+.verwijder-knop {
+  width: 90%;
+  margin: 10px auto 0 auto;
+  padding: 10px 0;
+  background: rgb(245, 197, 24);
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 10px #ccc;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  display: block;
+}
+.verwijder-knop:hover {
+  background: #e6b800;
+  color: #222;
+}
 .scroll-wrapper {
   position: relative;
   width: 90%;

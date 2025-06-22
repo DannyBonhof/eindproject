@@ -56,6 +56,12 @@ $favouriteShows = array_filter($shows, function($show) use ($favouriteIds) {
                 echo '<a href="/show?id=' . $show['id'] . '">';
                 echo '<img src="' . htmlspecialchars($image) . '" alt="' . htmlspecialchars($show['name']) . '">';
                 echo '</a>';
+                // Verwijder-knop direct onder de afbeelding
+                echo '<form method="POST" action="' . url('favourite/delete') . '" style="margin-top:10px;">';
+                echo csrf_field();
+                echo '<input type="hidden" name="show_id" value="' . $show['id'] . '">';
+                echo '<button type="submit" class="verwijder-knop">Verwijder uit Mijn Lijst</button>';
+                echo '</form>';
                 echo '<div class="rating">Rating: ' . htmlspecialchars($rating) . '</div>';
                 echo '</div>';
             }
