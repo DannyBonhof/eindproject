@@ -38,6 +38,7 @@
     $show1 = getRandomShow();
     $show2 = getRandomShow();
     $show3 = getRandomShow();
+    $show4 = getRandomShow();
         ?>
 
     <body>
@@ -94,6 +95,20 @@
             <p><strong>Titel:</strong> <?= htmlspecialchars($show3['name']) ?></p>
             <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show3['genres'])) ?></p>
             <p><strong>Rating:</strong> <?= htmlspecialchars($show3['rating']['average'] ?? 'N.v.t.') ?></p>
+            <?php else: ?>
+            <p>Kon geen serie laden, probeer het opnieuw.</p>
+            <?php endif; ?>
+        </div>
+        <div id="show">
+            <?php if ($show4): ?>
+            <?php    if (isset($show4['image']['medium'])): ?>
+            <a href="/show?id=<?= $show4['id'] ?>">
+                <img src="<?= htmlspecialchars($show4['image']['medium']) ?>" alt="<?= htmlspecialchars($show4['name']) ?>">
+            </a>
+            <?php    endif; ?>
+            <p><strong>Titel:</strong> <?= htmlspecialchars($show4['name']) ?></p>
+            <p><strong>Genres:</strong> <?= htmlspecialchars(implode(', ', $show4['genres'])) ?></p>
+            <p><strong>Rating:</strong> <?= htmlspecialchars($show4['rating']['average'] ?? 'N.v.t.') ?></p>
             <?php else: ?>
             <p>Kon geen serie laden, probeer het opnieuw.</p>
             <?php endif; ?>
