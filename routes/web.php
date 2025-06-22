@@ -1,5 +1,8 @@
-
 <?php
+// Verwijder een serie uit de favorieten
+
+
+
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -56,6 +59,8 @@ Route::get('/favourites', function () {
 Route::post('/series/{id}/favorite', [SerieController::class, 'favorite'])->name('series.favorite')->middleware('auth');
 
 Route::get('/favouritesadd/{id}', [FavoriteController::class, 'add'])->name('favourites.add')->middleware('auth');
+
+Route::post('/favourite/delete', [FavoriteController::class, 'deleteFavourite'])->name('favourites.delete')->middleware('auth');
  
 
 require __DIR__.'/auth.php';

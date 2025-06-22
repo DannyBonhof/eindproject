@@ -20,4 +20,14 @@ class FavoriteController extends Controller
             'user_id' => $user ? $user->id : null,
         ]);
     }
+
+    public function deleteFavourite(\Illuminate\Http\Request $request)
+    {
+        $user = Auth::user();
+        $showId = $request->input('show_id');
+        if ($user && $showId) {
+            $user->favourites()->detach($showId);
+        }
+        return redirect()->back();
+    }
 }
