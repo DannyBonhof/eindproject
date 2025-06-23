@@ -23,7 +23,7 @@
   position: relative;
   width: 90%;
   margin: 20px auto;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .scroll-container {
@@ -93,10 +93,14 @@
   opacity: 1;
 }
 
-.scroll-left {
+.scroll-left 
+{
   left: -50px;
+  margin-top: 20px;
 }
 
-.scroll-right {
-  right: -50px;
+.scroll-right 
+{
+    margin-top: 20px;
+    right: -50px;
 }

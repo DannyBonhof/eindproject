@@ -7,12 +7,12 @@
 
 <div id="AdCigaContainer">
     <img id="AdCiga" src="{{ asset('images/CigarootsAd.png') }}" alt="Advertentie">
-    <div class="adCiga-text">Poahhh donders lekker dit, dit moet u niet vergeten dit kan veelste gevoarlijk rook met mate of het gevaorlijk. Maor dit is wel de beste peuk die je kan halen.</div>
+    <div class="adCiga-text">Poahhh, donderjend lekker dit, dit moatst net ferjitte – dit kin fierste gefaarlik wêze, smoke mei mate of it wurdt gefaarlik. Mar dit is wol de bêste sigret dy’tst krije kinst.</div>
 </div>
 
 <div id="AdPilsContainer">
     <img id="AdPils" src="{{ asset(path: 'images/Bietn_Pils.png') }}" alt="Advertentie">
-    <div class="adpils-text">Poahhh donders lekker dit, dit kan wel eens de beste pils zien de je kan halen gemaokt van machtige Bietn maokt dit de beste pilsener.</div>
+    <div class="adpils-text">Poahhh, donderjend lekker dit, dit kin samar it bêste pils wêze datst krije kinst – makke fan machtige bieten makket dit it bêste pilske.</div>
 </div>
 
 
