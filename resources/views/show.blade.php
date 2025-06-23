@@ -52,15 +52,9 @@
         </div>
 
 
-        <!-- Dingen voor de favoButton -->
+        
         @auth   
         <a href="{{ url('favouritesadd/' . $show['id']) }}" class="favoButton" >Toevoegen aan Lijst </a>
-
-        <!-- <form method="POST" action="{{ url('favouritesadd/' . $show['id']) }}" style="margin-top: 18px;">
-            @csrf
-            <input type="hidden" name="serie_id" value="<?= htmlspecialchars($show['id']) ?>">
-            <button type="submit" class="favoButton">Voeg toe aan mijn lijst</button>
-        </form> -->
         
         @else
         <p style="margin-top: 18px;">Log in om deze serie aan je favorieten toe te voegen.</p>
