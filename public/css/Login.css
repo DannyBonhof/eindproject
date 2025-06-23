@@ -28,9 +28,8 @@
     border-radius: 10px;
     min-width: 300px;
     margin-left: 300px;
-    /* doet de linker meer links */
     margin-right: 300px;
-    /* doet de rechter meer rechts */
+    
 }
 
 #LoginButton,
@@ -46,7 +45,7 @@
 }
 
 
-/* Login en register input velden zoals de zoekbalk */
+
 #loginForm input[type="email"],
 #loginForm input[type="password"],
 #loginForm input[type="text"] {
