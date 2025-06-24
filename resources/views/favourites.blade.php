@@ -12,7 +12,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-// 1. Get the current user's favourite serie IDs
+
 $user = Auth::user();
 $favouriteIds = [];
 if ($user) {
@@ -35,7 +35,7 @@ if ($shows === NULL) {
     die("Kon JSON niet vinden.");
 }
 
-// 2. Filter the shows to only those in favourites
+
 $favouriteShows = array_filter($shows, function($show) use ($favouriteIds) {
     return in_array($show['id'], $favouriteIds);
 });

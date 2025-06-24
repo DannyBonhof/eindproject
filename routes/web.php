@@ -66,3 +66,6 @@ Route::post('/favourite/delete', [FavoriteController::class, 'deleteFavourite'])
 require __DIR__.'/auth.php';
 
 
+Route::get('/dashboard', function () {
+    return view('home');
+})->name('home');
