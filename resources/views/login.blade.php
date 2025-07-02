@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
 
-        <title>Login Pagina</title>
+        <title>Login Page</title>
         <div id="AdWrapper">
             <img id="AdPilsL" src="{{ asset('images/Bietn_Pils.png') }}" alt="Advertentie">
 
